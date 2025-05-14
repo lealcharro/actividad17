@@ -1,55 +1,68 @@
-name: Kanban Board Automation 
+name: Kanban Board Automation
 
 on:
   issues:
-    types: [closed]
+    types:
+      - opened
+      - closed
+      - reopened
+      - labeled
   pull_request:
-    types: [opened, ready_for_review]
+    types:
+      - opened
+      - closed
 
 jobs:
-  move_issues:
+  issue_opened:
     runs-on: ubuntu-latest
+    if: github.event_name == 'issues' && github.event.action == 'opened'
     steps:
-      - name: Move issue to In Progress when PR is opened or ready for review
-        if: github.event_name == 'pull_request' && (github.event.action == 'opened' || github.event.action == 'ready_for_review')
-        uses: actions/github-script@v7
+      - name: Add issue to Product Backlog
+        uses: actions/add-to-project@v0.5.0
         with:
-          script: |
-            const projectId = 'PVT_kwHOCAZAJs4A5AAx';
-            const statusFieldId = 'PVTSSF_lAHOCAZAJs4A5AAxzgt33Fk';
-            const inProgressOptionId = '47fc9ee4';
-            const issueNumbers = (context.payload.pull_request.body.match(/#(\d+)/g) || []).map(s => s.replace('#', ''));
-            for (const issue_number of issueNumbers) {
-              // Buscar el item del proyecto asociado a la issue
-              const items = await github.graphql(query($projectId:ID!, $first:Int!) {\n  node(id: $projectId) {\n    ... on ProjectV2 {\n      items(first: $first) {\n        nodes {\n          id\n          content {\n            ... on Issue { number }\n          }\n        }\n      }\n    }\n  }\n}, { projectId, first: 100 });
-              const item = items.node.items.nodes.find(i => i.content && i.content.number == issue_number);
-              if (item) {
-                await github.graphql(mutation($projectId:ID!, $itemId:ID!, $fieldId:ID!, $optionId:String!) {\n  updateProjectV2ItemFieldValue(input: {\n    projectId: $projectId,\n    itemId: $itemId,\n    fieldId: $fieldId,\n    value: { singleSelectOptionId: $optionId }\n  }) {\n    projectV2Item { id }\n  }\n}, {
-                  projectId,
-                  itemId: item.id,
-                  fieldId: statusFieldId,
-                  optionId: inProgressOptionId
-                });
-              }
-            }
+          project-url: https://github.com/users/lealcharro/projects/3
+          github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN  }}
 
-      - name: Move issue to Done when issue is closed
-        if: github.event_name == 'issues' && github.event.action == 'closed'
-        uses: actions/github-script@v7
+  issue_labeled_blocked:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'issues' && github.event.action == 'labeled' && github.event.label.name == 'Blocked'
+    steps:
+      - name: Move to Icebox when blocked
+        uses: actions/add-to-project@v0.5.0
         with:
-          script: |
-            const projectId = 'PVT_kwHOCAZAJs4A5AAx';
-            const statusFieldId = 'PVTSSF_lAHOCAZAJs4A5AAxzgt33Fk';
-            const doneOptionId = '98236657';
-            const issue_number = context.payload.issue.number;
-            // Buscar el item del proyecto asociado a la issue
-            const items = await github.graphql(query($projectId:ID!, $first:Int!) {\n  node(id: $projectId) {\n    ... on ProjectV2 {\n      items(first: $first) {\n        nodes {\n          id\n          content {\n            ... on Issue { number }\n          }\n        }\n      }\n    }\n  }\n}, { projectId, first: 100 });
-            const item = items.node.items.nodes.find(i => i.content && i.content.number == issue_number);
-            if (item) {
-              await github.graphql(mutation($projectId:ID!, $itemId:ID!, $fieldId:ID!, $optionId:String!) {\n  updateProjectV2ItemFieldValue(input: {\n    projectId: $projectId,\n    itemId: $itemId,\n    fieldId: $fieldId,\n    value: { singleSelectOptionId: $optionId }\n  }) {\n    projectV2Item { id }\n  }\n}, {
-                projectId,
-                itemId: item.id,
-                fieldId: statusFieldId,
-                optionId: doneOptionId
-              });
-            }
+          project-url: https://github.com/users/lealcharro/projects/3
+          github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN  }}
+          column-name: "Icebox"
+
+  pr_opened:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request' && github.event.action == 'opened'
+    steps:
+      - name: Move linked issue to In Progress
+        uses: actions/add-to-project@v0.5.0
+        with:
+          project-url: https://github.com/users/lealcharro/projects/3
+          github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          column-name: "In progress"
+
+  issue_ready_for_testing:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'issues' && github.event.action == 'labeled' && github.event.label.name == 'Ready for Testing'
+    steps:
+      - name: Move to Review/QA when ready for testing
+        uses: actions/add-to-project@v0.5.0
+        with:
+          project-url: https://github.com/users/lealcharro/projects/3
+          github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN  }}
+          column-name: "Review/QA"
+
+  issue_closed:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'issues' && github.event.action == 'closed'
+    steps:
+      - name: Move to Done when closed
+        uses: actions/add-to-project@v0.5.0
+        with:
+          project-url: https://github.com/users/lealcharro/projects/3
+          github-token: ${{secrets.PERSONAL_ACCESS_TOKEN }}
+          column-name: "Done"
