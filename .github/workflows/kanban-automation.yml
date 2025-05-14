@@ -1,0 +1,30 @@
+name: Kanban Board Automation
+
+on:
+  pull_request:
+    types: [opened]
+  issues:
+    types: [closed]
+
+jobs:
+  move_card_on_pr:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request' && (github.event.action == 'opened')
+    steps:
+      - name: Move linked issue to In Progress
+        uses: alex-page/github-project-automation-plus@v0.8.3
+        with:
+          project: "Grupo 7's DevOps Agile project"
+          column: "In progress"
+          repo-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          
+  move_card_on_close:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'issues' && github.event.action == 'closed'
+    steps:
+      - name: Move closed issues to Done
+        uses: alex-page/github-project-automation-plus@v0.8.3
+        with:
+          project: "Grupo 7's DevOps Agile project"
+          column: "Done"
+          repo-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
