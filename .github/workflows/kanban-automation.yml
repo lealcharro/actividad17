@@ -1,4 +1,4 @@
-name: Kanban Board Automation 
+name: Kanban Board Automation
 
 on:
   issues:
@@ -21,11 +21,16 @@ jobs:
             const issueNumbers = (context.payload.pull_request.body.match(/#(\d+)/g) || []).map(s => s.replace('#', ''));
             for (const issue_number of issueNumbers) {
               // Buscar el item del proyecto asociado a la issue
-              const items = await github.graphql(query($projectId:ID!, $first:Int!) {\n  node(id: $projectId) {\n    ... on ProjectV2 {\n      items(first: $first) {\n        nodes {\n          id\n          content {\n            ... on Issue { number }\n          }\n        }\n      }\n    }\n  }\n}, { projectId, first: 100 });
+              const items = await github.graphql({
+                query: query($projectId:ID!, $first:Int!) {\n  node(id: $projectId) {\n    ... on ProjectV2 {\n      items(first: $first) {\n        nodes {\n          id\n          content {\n            ... on Issue { number }\n          }\n        }\n      }\n    }\n  }\n},
+                projectId,
+                first: 100
+              });
               const item = items.node.items.nodes.find(i => i.content && i.content.number == issue_number);
               if (item) {
-                await github.graphql(mutation($projectId:ID!, $itemId:ID!, $fieldId:ID!, $optionId:String!) {\n  updateProjectV2ItemFieldValue(input: {\n    projectId: $projectId,\n    itemId: $itemId,\n    fieldId: $fieldId,\n    value: { singleSelectOptionId: $optionId }\n  }) {\n    projectV2Item { id }\n  }\n}, {
-                  projectId: projectId,
+                await github.graphql({
+                  query: mutation($projectId:ID!, $itemId:ID!, $fieldId:ID!, $optionId:String!) {\n  updateProjectV2ItemFieldValue(input: {\n    projectId: $projectId,\n    itemId: $itemId,\n    fieldId: $fieldId,\n    value: { singleSelectOptionId: $optionId }\n  }) {\n    projectV2Item { id }\n  }\n},
+                  projectId,
                   itemId: item.id,
                   fieldId: statusFieldId,
                   optionId: reviewQAOptionId
@@ -44,11 +49,16 @@ jobs:
             const issueNumbers = (context.payload.pull_request.body.match(/#(\d+)/g) || []).map(s => s.replace('#', ''));
             for (const issue_number of issueNumbers) {
               // Buscar el item del proyecto asociado a la issue
-              const items = await github.graphql(query($projectId:ID!, $first:Int!) {\n  node(id: $projectId) {\n    ... on ProjectV2 {\n      items(first: $first) {\n        nodes {\n          id\n          content {\n            ... on Issue { number }\n          }\n        }\n      }\n    }\n  }\n}, { projectId, first: 100 });
+              const items = await github.graphql({
+                query: query($projectId:ID!, $first:Int!) {\n  node(id: $projectId) {\n    ... on ProjectV2 {\n      items(first: $first) {\n        nodes {\n          id\n          content {\n            ... on Issue { number }\n          }\n        }\n      }\n    }\n  }\n},
+                projectId,
+                first: 100
+              });
               const item = items.node.items.nodes.find(i => i.content && i.content.number == issue_number);
               if (item) {
-                await github.graphql(mutation($projectId:ID!, $itemId:ID!, $fieldId:ID!, $optionId:String!) {\n  updateProjectV2ItemFieldValue(input: {\n    projectId: $projectId,\n    itemId: $itemId,\n    fieldId: $fieldId,\n    value: { singleSelectOptionId: $optionId }\n  }) {\n    projectV2Item { id }\n  }\n}, {
-                  projectId: projectId,
+                await github.graphql({
+                  query: mutation($projectId:ID!, $itemId:ID!, $fieldId:ID!, $optionId:String!) {\n  updateProjectV2ItemFieldValue(input: {\n    projectId: $projectId,\n    itemId: $itemId,\n    fieldId: $fieldId,\n    value: { singleSelectOptionId: $optionId }\n  }) {\n    projectV2Item { id }\n  }\n},
+                  projectId,
                   itemId: item.id,
                   fieldId: statusFieldId,
                   optionId: doneOptionId
@@ -66,13 +76,18 @@ jobs:
             const doneOptionId = '98236657';
             const issue_number = context.payload.issue.number;
             // Buscar el item del proyecto asociado a la issue
-            const items = await github.graphql(query($projectId:ID!, $first:Int!) {\n  node(id: $projectId) {\n    ... on ProjectV2 {\n      items(first: $first) {\n        nodes {\n          id\n          content {\n            ... on Issue { number }\n          }\n        }\n      }\n    }\n  }\n}, { projectId, first: 100 });
+            const items = await github.graphql({
+              query: query($projectId:ID!, $first:Int!) {\n  node(id: $projectId) {\n    ... on ProjectV2 {\n      items(first: $first) {\n        nodes {\n          id\n          content {\n            ... on Issue { number }\n          }\n        }\n      }\n    }\n  }\n},
+              projectId,
+              first: 100
+            });
             const item = items.node.items.nodes.find(i => i.content && i.content.number == issue_number);
             if (item) {
-              await github.graphql(mutation($projectId:ID!, $itemId:ID!, $fieldId:ID!, $optionId:String!) {\n  updateProjectV2ItemFieldValue(input: {\n    projectId: $projectId,\n    itemId: $itemId,\n    fieldId: $fieldId,\n    value: { singleSelectOptionId: $optionId }\n  }) {\n    projectV2Item { id }\n  }\n}, {
-                  projectId: projectId,
-                  itemId: item.id,
-                  fieldId: statusFieldId,
-                  optionId: doneOptionId
-                });
+              await github.graphql({
+                query: mutation($projectId:ID!, $itemId:ID!, $fieldId:ID!, $optionId:String!) {\n  updateProjectV2ItemFieldValue(input: {\n    projectId: $projectId,\n    itemId: $itemId,\n    fieldId: $fieldId,\n    value: { singleSelectOptionId: $optionId }\n  }) {\n    projectV2Item { id }\n  }\n},
+                projectId,
+                itemId: item.id,
+                fieldId: statusFieldId,
+                optionId: doneOptionId
+              });
             }
