@@ -14,6 +14,7 @@ jobs:
         if: github.event_name == 'pull_request' && (github.event.action == 'opened' || github.event.action == 'ready_for_review')
         uses: actions/github-script@v7
         with:
+          github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           script: |
             const projectId = 'PVT_kwHOCAZAJs4A5AAx';
             const statusFieldId = 'PVTSSF_lAHOCAZAJs4A5AAxzgt33Fk';
@@ -33,6 +34,7 @@ jobs:
         if: github.event_name == 'pull_request' && github.event.action == 'closed'
         uses: actions/github-script@v7
         with:
+          github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           script: |
             const projectId = 'PVT_kwHOCAZAJs4A5AAx';
             const statusFieldId = 'PVTSSF_lAHOCAZAJs4A5AAxzgt33Fk';
@@ -52,6 +54,7 @@ jobs:
         if: github.event_name == 'issues' && github.event.action == 'closed'
         uses: actions/github-script@v7
         with:
+          github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           script: |
             const projectId = 'PVT_kwHOCAZAJs4A5AAx';
             const statusFieldId = 'PVTSSF_lAHOCAZAJs4A5AAxzgt33Fk';
