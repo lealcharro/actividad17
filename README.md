@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/f1107e5d-5c75-47ad-838a-70089ddb1323)![image](https://github.com/user-attachments/assets/cc0ccf7a-e893-4b50-8739-80fcb565b6dd)### **Actividad: Gestión ágil de proyectos con GitHub Projects, configuración de Kanban Board y creación de historias de usuario**
+### **Actividad: Gestión ágil de proyectos con GitHub Projects, configuración de Kanban Board y creación de historias de usuario**
 
 #### Integrantes:
 
@@ -18,23 +18,39 @@
 
 #### Parte 1
 
-En este ejercicio, aprenderás cómo configurar un Kanban board usando GitHub Projects para el repositorio del curso. Puedes crear otro repositorio si deseas.
+En este ejercicio, aprenderás cómo configurar un Kanban board usando GitHub Projects para el repositorio del curso. Puedes crear otro repositorio si deseas. En nuestra actividad creamos un nuevo repositorio para facilitar la trazabilidad de las modificaciones por cada integrante del grupo.
 
 1. Navega al repositorio del curso donde has estado trabajando en GitHub.
 
+![image](https://github.com/user-attachments/assets/54ab099a-2287-44a9-a09f-e56ff9359c3a)
+
 2. Una vez que estés en la página del repositorio, haz clic en la pestaña **Projects**.
+
+![image](https://github.com/user-attachments/assets/5a5f0312-ec0b-4c3d-94e2-834c51fbc2a3)
 
 3. Al lado del botón **Link project**, haz clic en el menú desplegable y selecciona **New Project**.
 
+![image](https://github.com/user-attachments/assets/08b22283-fddc-48d1-ba76-2ea866280e1c)
+
 4. Después de hacer clic en el botón **New Project**, aparecerá una ventana emergente para crear un proyecto. Selecciona **Kanban**, como se muestra en la captura de pantalla.
+
+![image](https://github.com/user-attachments/assets/4699eddf-7399-480f-b884-718007043646)
 
 5. Nombra tu proyecto como **Devops-agile** y procede haciendo clic en el botón **Create project**.
 
+![image](https://github.com/user-attachments/assets/7912e90a-21d5-46bf-890b-54ef8b0c5fee)
+
 6. En el Kanban board del proyecto, tendrás columnas para representar diferentes etapas de tu flujo de trabajo, como **Backlog**, **Ready**, **In Progress**, **In review**, y **Done**. Puedes agregar columnas personalizadas según los requisitos de tu flujo de trabajo.  
+
+![image](https://github.com/user-attachments/assets/d3f25aaa-87e3-4fe3-956f-b64dd1a20e42)
 
 7. Para personalizar o modificar el nombre de una columna, haz clic en los tres puntos y luego selecciona **Edit details**.
 
+![image](https://github.com/user-attachments/assets/a8fb6fb6-9512-4322-b0c3-0907d3ead249)
+
 8. Cuando hagas clic en **Edit details**, aparecerá una ventana emergente, como se muestra en la captura de pantalla a continuación. Introduce el nombre de la columna requerido en el cuadro de texto resaltado. Puedes agregar una descripción apropiada o elegir eliminarla, luego haz clic en **Save** para confirmar los cambios.
+
+![image](https://github.com/user-attachments/assets/b9f93aee-1eb5-461a-ab66-e28a2f8e9184)
 
 9. De manera similar, renombra las columnas restantes de la siguiente manera:
    - Renombra la columna **Ready** a **Icebox**.
@@ -44,13 +60,19 @@ En este ejercicio, aprenderás cómo configurar un Kanban board usando GitHub Pr
 
 10. Después de realizar los cambios mencionados, presenta tu Kanban board.
 
+![image](https://github.com/user-attachments/assets/19f95f0d-8074-4ca1-96e8-823fe4f12f3b)
+
 11. Para agregar una nueva columna, navega al final de las columnas existentes y haz clic en el botón **+**. Luego, selecciona **New column** de las opciones. Introduce el nombre de la columna como **Product Backlog** en el campo de texto Label, y finalmente, haz clic en **Save** para aplicar los cambios.
+
+![image](https://github.com/user-attachments/assets/f5614cfe-9564-41d4-ac1b-f44dc9bba9a3)
 
 12. Para establecer la secuencia correcta en el Kanban board, arrastra la columna **Product Backlog** y colócala antes de la columna **In Progress**. La flecha en la captura de pantalla a continuación indica desde dónde necesitas arrastrar y soltar la columna.
 
-13. De manera similar, crea la columna **Sprint Backlogs**, y luego reorganízala para que se asemeje al Kanban board mostrado a continuación.
-    [Ejemplo de tablero kanban](https://github.com/users/kapumota/projects/5)
+![image](https://github.com/user-attachments/assets/4934c264-76b9-406c-b6c8-e58a8bac953a)
 
+13. De manera similar, crea la columna **Sprint Backlogs**, y luego reorganízala para que se asemeje al Kanban board mostrado a continuación.
+
+![image](https://github.com/user-attachments/assets/9f68117f-4154-4586-8c49-31df2453f27d)
 
 #### Parte 2
 
@@ -246,14 +268,16 @@ En este ejercicio, crearás una nueva label en GitHub llamada **technical debt**
 
 2. Desde la página de issues, selecciona el botón **Labels**.
 
-![image](https://github.com/user-attachments/assets/03ee3f28-d28a-4aae-8c60-87425fdd5053)
-
 3. Desde la página de labels, selecciona el botón **New label**.
+
+![image](https://github.com/user-attachments/assets/03ee3f28-d28a-4aae-8c60-87425fdd5053)
 
 4. En la sección de nueva label:  
    (1) establece el nombre de la label como **technical debt**  
    (2) establece el Color como amarillo (#FBCA04)  
    (3) presiona el botón **Create label**.
+
+![image](https://github.com/user-attachments/assets/cc0ccf7a-e893-4b50-8739-80fcb565b6dd)
 
 ![image](https://github.com/user-attachments/assets/688e0be3-49db-435c-94df-bf0f60cc2ffb)
 
@@ -266,8 +290,9 @@ En este ejercicio, crearás una nueva label en GitHub llamada **technical debt**
 ![image](https://github.com/user-attachments/assets/7fa28bba-fc04-4d31-8c8d-14733dfaa03a)
 
 
-
 Ahora deberías ver una label amarilla **technical debt** que podemos usar para anotar nuestras historias.
+
+![image](https://github.com/user-attachments/assets/f1107e5d-5c75-47ad-838a-70089ddb1323)
 
 ##### 4: Añadir labels a las historias
 
@@ -377,6 +402,9 @@ Al final de este ejercicio, tu Kanban board debería verse así: [Ejemplo de tab
 
 1. Imagina que has recibido comentarios de stakeholders indicando que necesitan una funcionalidad adicional, como "Exportar datos del contador a CSV".
 2. Crea una nueva historia de usuario basada en estos comentarios.
+
+![image](https://github.com/user-attachments/assets/1f528d10-f183-408d-a82d-1853c98da3f9)
+
 3. Realiza una sesión de refinamiento del backlog y prioriza esta nueva historia en el Product Backlog.
 4. Añade los detalles necesarios para que esta historia esté lista para el sprint, incluyendo criterios de aceptación.
 
