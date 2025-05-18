@@ -4,7 +4,7 @@
 
 - Chacón Roque, Leonardo Alexander 20221002K
 - Condor Chavez Kevin
-- Delgado Velard, Diego
+- Delgado Velarde, Diego Manuel 20222676E
 
 
 #### Objetivos:
@@ -369,30 +369,50 @@ Al final de este ejercicio, tu Kanban board debería verse así: [Ejemplo de tab
 
 ![image](https://github.com/user-attachments/assets/396481b4-c3c0-471c-9a8f-76905c6ab931)
 
-##### Ejercicio 3: Automatización de Kanban board con GitHub Actions
+##### Ejercicio 3: Automatización de Kanban board
+Configuraremos el siguiente flujo de trabajo:
+* Si se reabre una PR o issue, se mueve a In progress para retomar el trabajo.
+* Los PRs que se marcan con "request changes" se mueven a Review para revisar y modificar.
+* Las PRs que son aprobadas , se procede a realizar el merge y se mueven a Done y a la vez se cierra la issue vinculada a la PR que le dio solución.
 
-**Objetivo:** Aprender a automatizar tareas en el Kanban board usando GitHub Actions.
+Para lo cual implementaremos la issue#3 y hacemos commit en nuestra rama feat/resolve-issue#3, luego crearemos la PR#25 que da solución a la issue#3.
+ <div align="center">
+      <img src="https://i.postimg.cc/Px7yqg9D/Captura-de-pantalla-2025-05-17-184814.png" alt="Pruebas" width="900" />
+    </div>
+  
+  En este caso un compañero(reviewer) revisa la PR y solicita cambios entonces se marca como "requesting-changes" 
+   <div align="center">
+      <img src="https://i.postimg.cc/9FCbQYNJ/Captura-de-pantalla-2025-05-17-185232.png" alt="Pruebas" width="900" />
+    </div>
 
-**Instrucciones:**
 
-1. Configura un flujo de trabajo de GitHub Actions que automáticamente mueva las historias de usuario entre columnas del Kanban board basado en eventos. Por ejemplo, mover automáticamente una historia a "In Progress" cuando se asocia un pull request.
-2. Crea un archivo de configuración de GitHub Actions en la carpeta `.github/workflows` que defina estas reglas de automatización.
-
-**Resultado esperado:** Las historias de usuario se mueven automáticamente en el Kanban board según las reglas definidas, como cambiar de columna al asociar un pull request o al cerrar un issue.
-
+   <div align="center">
+      <img src="https://i.postimg.cc/J4xqDHfm/Captura-de-pantalla-2025-05-17-193334.png" alt="Pruebas" width="900" />
+    </div>
+Observamos como la PR se mueve de In progress a Review.
+   <div align="center">
+      <img src="https://i.postimg.cc/wB70dxbz/Captura-de-pantalla-2025-05-17-185144.png" alt="Pruebas" width="900" />
+    </div>
+Luego de realizar los cambios solicitados y que se apruebe la PR se procede a realizar el merge.
+   <div align="center">
+      <img src="https://i.postimg.cc/YCj1vnNf/Captura-de-pantalla-2025-05-17-185647.png" alt="Pruebas" width="900" />
+    </div>
+Podemos observar como se movio la PR a Done y se cerro la issue#3.
+   <div align="center">
+      <img src="https://i.postimg.cc/YSHq5jSG/Captura-de-pantalla-2025-05-17-185729.png" alt="Pruebas" width="900" />
+    </div>
 
 ##### Ejercicio 4: Seguimiento de tiempo y esfuerzo usando GitHub Projects
-
-**Objetivo:** Aprender a usar el seguimiento de tiempo y esfuerzo para las historias de usuario en GitHub Projects.
-
+Configuraremos el seguimiento de tiempo y esfuerzo para las historias de usuario en GitHub Projects.    
 **Instrucciones:**
-
 1. Añade un campo personalizado en tu Kanban board para registrar el esfuerzo estimado de cada historia de usuario (en horas).
 2. Establece una estimación de esfuerzo para cada historia en el Product Backlog.
 3. Durante el sprint, actualiza el campo para reflejar el tiempo real invertido en cada historia.
 
-**Resultado esperado:** Cada historia de usuario tendrá una estimación de tiempo y un registro del tiempo real invertido, permitiendo un análisis del esfuerzo requerido.
-
+ <div align="center">
+      <img src="https://i.postimg.cc/cCMV84Sj/Captura-de-pantalla-2025-05-17-194946.png" alt="Pruebas" width="1000" />
+    </div>
+Observamos que cada historia de usuario tiene una estimación de tiempo y un registro del tiempo real invertido.
 
 ##### Ejercicio 5: Refinamiento de backlog basado en comentarios de los stakeholders
 
