@@ -3,7 +3,7 @@
 #### Integrantes:
 
 - Chacón Roque, Leonardo Alexander 20221002K
-- Condor Chavez Kevin
+- Condor Chavez Kevin 20172738B
 - Delgado Velarde, Diego Manuel 20222676E
 
 
@@ -339,7 +339,6 @@ Al final de este ejercicio, tu Kanban board debería verse así: [Ejemplo de tab
 2. Vincula las historias de usuario existentes, como "Need a service that has a counter", "Must allow multiple counters", y "Counters can be reset" a este Epic.
 3. Añade una nueva historia de usuario bajo este Epic que abarque una funcionalidad adicional (por ejemplo, "Generar reportes de uso de contadores").
 
-**Resultado esperado:** El Epic "Gestión de Contadores" debe contener las historias de usuario relacionadas, proporcionando una visión global de esta funcionalidad.
 
 ![image](https://github.com/user-attachments/assets/9df8b646-545f-4f87-bcbd-970f10035368)
 
@@ -422,23 +421,30 @@ Observamos que cada historia de usuario tiene una estimación de tiempo y un reg
 
 1. Imagina que has recibido comentarios de stakeholders indicando que necesitan una funcionalidad adicional, como "Exportar datos del contador a CSV".
 2. Crea una nueva historia de usuario basada en estos comentarios.
-
-![image](https://github.com/user-attachments/assets/1f528d10-f183-408d-a82d-1853c98da3f9)
-
 3. Realiza una sesión de refinamiento del backlog y prioriza esta nueva historia en el Product Backlog.
 4. Añade los detalles necesarios para que esta historia esté lista para el sprint, incluyendo criterios de aceptación.
 
-**Resultado esperado:** La nueva historia de usuario basada en los comentarios de los stakeholders está correctamente integrada y priorizada en el Product Backlog.
-
-
+![image](https://github.com/user-attachments/assets/1f528d10-f183-408d-a82d-1853c98da3f9)
 ##### Ejercicio 6: Análisis del flujo de trabajo usando el Kanban board
 
 **Objetivo:** Analizar el flujo de trabajo usando las métricas proporcionadas por el Kanban board.
 
 **Instrucciones:**
-
+ 
 1. Activa las métricas en GitHub Projects para tu Kanban board.
 2. Observa y analiza las métricas generadas, como el tiempo promedio en cada columna y el número de historias completadas.
 3. Identifica cuellos de botella en tu flujo de trabajo e identifica posibles mejoras.
 
-**Resultado esperado:** Obtención de un análisis detallado del flujo de trabajo y una lista de posibles acciones para mejorar la eficiencia del equipo, de acuerdo a lo que se presenta en github.
+ <div align="center">
+      <img src="https://i.postimg.cc/wvDdTkmM/17-1.png" alt="Pruebas" width="1000" />
+    </div>
+
+Podemos observar el tiempo desde que  empezamos a crear las issues (14 de mayo) y cuando solucionamos una issue(17 de mayo) que fue la #3.
+
+ <div align="center">
+      <img src="https://i.postimg.cc/zv5YLRCj/17-2.png" alt="Pruebas" width="1000" />
+    </div>
+Ahora en el siguiente grafico podemos notar la cantidad de issues en cada columna.
+
+Los posibles cuellos de botella serian las tareas que estan en Icebox e In progress desde el tiempo que se crearon hasta ahora siguen estacandas, lo que nos invita a reunirnos urgentemente en equipo para llegar a una solucion.
+
