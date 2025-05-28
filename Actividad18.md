@@ -1,4 +1,4 @@
-### **Actividad**: Gestión ágil de sprints con GitHub, planificación, ejecución y cierre de Sprints
+![image](https://github.com/user-attachments/assets/20cef7ed-7964-49c7-ae3c-b7f033aeebc2)### **Actividad**: Gestión ágil de sprints con GitHub, planificación, ejecución y cierre de Sprints
 
 ##### Objetivos:
 
@@ -51,9 +51,15 @@ En este ejercicio, configurarás tus sprints. GitHub configurará tres (3) sprin
 
 1. Ve a GitHub, inicia sesión con tu cuenta de GitHub, y abre tu Kanban board.
 
+![image](https://github.com/user-attachments/assets/1620d1ea-e776-4251-9b78-03a1daabb61d)
+
 2. Para crear el sprint, haz clic en el botón desplegable junto a **Backlog**. Luego, haz clic en la flecha derecha junto a **Fields** y selecciona **New field**.
 
+![image](https://github.com/user-attachments/assets/4f824027-98b9-4eb9-825c-685668910d80)
+
 3. Aparecerá una ventana emergente. Introduce **Sprint** como el nombre del campo, elige **Iteration** como el tipo de campo, y deja la fecha de inicio en la fecha actual. Mantén la duración en dos semanas. Finalmente, haz clic en el botón **Save and create**.
+
+![image](https://github.com/user-attachments/assets/55bffa45-5f31-435c-8816-563b81e7741d)
 
 4. Ahora tienes un sprint que se puede usar para la planificación del sprint en el próximo ejercicio.
 
@@ -64,16 +70,26 @@ En este ejercicio, crearás un sprint plan. Asignaremos puntos de historia estim
 
 1. Selecciona la historia superior **Need a service that has a counter** del Product Backlog para abrirla.
 
+![image](https://github.com/user-attachments/assets/0b3a6a29-bca1-46d8-ae5e-812ce0c66915)
+
 2. Discutiste la historia con el equipo, y tus desarrolladores están de acuerdo en que esta es una historia grande que vale 8 puntos de historia, así que establece el **Estimate** en 8.
 
+![image](https://github.com/user-attachments/assets/a9bd3e17-52af-426e-9153-33c1f2752cef)
+
 3. Haz clic en **Choose an iteration** junto a **Sprints** y selecciona el primer sprint de la lista desplegable para asignar la historia a ese sprint. Puedes asignar una historia a más de un sprint, pero esto no es muy ágil. Si tu historia es más grande que un sprint, entonces es demasiado grande y debe dividirse en historias más pequeñas **del tamaño de un sprint**.
+
+![image](https://github.com/user-attachments/assets/a7ee73d0-d8ec-4e30-9f44-1464c519c98b)
 
 4. Haz clic en la **X** para cerrar la ventana de la historia y volver al Kanban board.
 
 5. El equipo de desarrollo ha determinado que agregar una historia de 8 puntos al sprint es aceptable. Arrastra la historia del Product Backlog al **Sprint Backlog**.  
    **Nota**: Puedes ver las fechas de inicio y fin de la historia de usuario pasando el ratón sobre el Sprint que se muestra en la tarjeta.
 
+![image](https://github.com/user-attachments/assets/4552ffcc-92d6-4f43-91bf-c3f7671141f3)
+
 6. Observa que la estimación de puntos de historia y las fechas del sprint son anotaciones en la historia.
+
+![image](https://github.com/user-attachments/assets/e7ae89cf-8c60-4a14-b5f1-2f363c4b7ece)
 
 7. La reunión de planificación del sprint ha avanzado bien. En las discusiones con el equipo de desarrollo, han estimado las siguientes dos historias en el Product Backlog y han determinado que ambas pueden caber en el sprint actual. Selecciona cada una de las siguientes historias en el Product Backlog, asígnales los puntos de historia correspondientes y el mismo Sprint, y arrástralas al Sprint Backlog en el mismo orden.
 
@@ -82,14 +98,26 @@ En este ejercicio, crearás un sprint plan. Asignaremos puntos de historia estim
    | Must persist counter across restarts       | 5                  |
    | Deploy service to the cloud               | 5                  |
 
+![image](https://github.com/user-attachments/assets/aab90c75-e856-479a-a0ca-1dbd665ecb98)
+
+![image](https://github.com/user-attachments/assets/ee6aa147-36df-4fc6-90f7-29486a43e64c)
+
 8. Al final de este paso, deberás tener tu sprint plan.
+
+![image](https://github.com/user-attachments/assets/c5dc6efa-d553-451e-9ba7-06991545b0be)
 
 9. Basado en la velocidad del equipo, el equipo de desarrollo ha decidido que hay suficientes historias en el sprint, pero queda algo de tiempo en la reunión de planificación del sprint para estimar más historias. Añade las siguientes estimaciones a las historias en el Product Backlog.
 
    - Counters can be reset -> 3  
    - Need ability to update a counter to new value -> 5  
 
+![image](https://github.com/user-attachments/assets/fdc8f041-5d04-480b-84d8-bad6a934705e)
+
+![image](https://github.com/user-attachments/assets/d0707b6f-2513-4521-9f04-2aa9f02646c4)
+
 10. Al final de este ejercicio, muestra tu Kanban board.
+
+![image](https://github.com/user-attachments/assets/42b5bae7-3ecc-457b-b192-147d39e46995)
 
 
 ####  Parte 2
