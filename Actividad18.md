@@ -243,9 +243,15 @@ En este ejercicio, configurarás tu burndown chart para mostrar el estado de las
 
 3. Esta acción abrirá la sección **Insights** de tu proyecto. Aquí, verás el gráfico de **Status** predeterminado generado para tu proyecto.
 
+![image](https://github.com/user-attachments/assets/c9cab2f0-f306-4a66-b56e-dc9bd923868e)
+
 4. Para configurar un burndown chart que solo muestre el estado de las historias en la columna Done en lugar del gráfico predeterminado, aplica un filtro. Haz clic en **Filter by keyword or field**, escribe **Status** y selecciona **status:** del menú desplegable. Esto mostrará otro menú desplegable con todas las columnas de tu Kanban board. Selecciona **Done**.
 
+![image](https://github.com/user-attachments/assets/9332428d-8bae-4da7-b38f-6a8b4154fafc)
+
 5. Al pasar el cursor sobre el gráfico, puedes ver el número de historias de usuario en la columna Done. Estas incluyen las dos historias, **Need a service that has a counter** y **Must persist counter across restart,** que moviste a Done en el ejercicio anterior.
+
+![image](https://github.com/user-attachments/assets/ffc7f948-9761-4925-97d7-33ee58e7b171)
 
 6. A continuación, para crear un nuevo gráfico que muestre el número de story points completados y restantes en el sprint, comienza limpiando el filtro haciendo clic en el botón **clear filter**. Luego, haz clic en el botón **Configure**.  Esto proporcionará un indicador visual de tu progreso.
 
@@ -258,15 +264,21 @@ En este ejercicio, configurarás tu burndown chart para mostrar el estado de las
 
    Después de configurar estas opciones, haz clic en el botón **Save to new chart**.
 
+![image](https://github.com/user-attachments/assets/16309208-e715-417b-8bc7-b4961533f55d)
+
 8. Para centrar el gráfico en un sprint específico, usa la opción de filtro. Escribe **sprint:** en el cuadro de filtro y selecciona el sprint como **Sprint 1**. Nota: **Sprint 1** se refiere a la primera iteración del sprint que asignaste a las historias.
+
+![image](https://github.com/user-attachments/assets/3bbf8f66-3f9f-4201-a821-55c038c8a9b8)
 
 9. Al pasar el ratón sobre la columna Done, se mostrará el número de story points completados en el sprint, mientras que al pasar el ratón sobre la columna Progress se mostrará el número de story points restantes en el sprint. Esto proporciona un indicador visual útil de tu progreso. El burndown chart te permite evaluar rápidamente qué historias se han completado y cuáles aún requieren trabajo.
 
+![image](https://github.com/user-attachments/assets/cdf83a28-bcc8-4f4a-9494-f7d90c231882)
 
 **Nota**: Para obtener información más detallada sobre tu proyecto, puedes personalizar las opciones del eje x, el eje y y la agrupación según tus requisitos específicos. Además, tienes la flexibilidad de modificar el layout del gráfico para visualizar mejor los datos. Al ajustar estas configuraciones, puedes crear representaciones más significativas e informativas que se alineen con tus objetivos de análisis.
 
+![image](https://github.com/user-attachments/assets/667774ee-0c79-481f-bfd6-c1ad33234b58)
 
-#### Parte 3
+#### Parte 4
 
 En este ejercicio práctico, aprenderás las actividades esenciales de cierre de sprint utilizando GitHub para gestionar historias no terminadas y preparar el backlog para el próximo sprint. Ajustarás los story points para las tareas incompletas, moverás las historias completadas a la columna **Done** y crearás nuevos issues para documentar el trabajo pendiente, asegurando una transición y continuidad fluidas entre sprints.
 
