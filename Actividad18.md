@@ -1,6 +1,10 @@
-![image](https://github.com/user-attachments/assets/20cef7ed-7964-49c7-ae3c-b7f033aeebc2)
-
 ### **Actividad**: Gestión ágil de sprints con GitHub, planificación, ejecución y cierre de Sprints
+
+#### Integrantes:
+
+- Chacón Roque, Leonardo Alexander 20221002K
+- Condor Chavez Kevin 20172738B
+- Delgado Velarde, Diego Manuel 20222676E
 
 ##### Objetivos:
 
