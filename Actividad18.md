@@ -300,19 +300,37 @@ En este ejercicio, gestionarás las historias no terminadas en el sprint. Estas 
 
 1. Selecciona la historia **Deploy service to the cloud** en la columna In Progress para abrirla.
 
+![image](https://github.com/user-attachments/assets/9cdea706-5f74-428b-811c-babf9a543ff4)
+
 2. Haz clic en la opción **Estimate**.
 
 3. El desarrollador ha determinado que no se gastaron 5 story points de esfuerzo en esta historia y simplemente se quedaron sin tiempo. Estiman que se gastaron 2 story points. Introduce **2** en el campo de texto para cambiar los story points. Ahora podemos ver que los story points están configurados en 2. Luego, haz clic en la **X** para cerrar la ventana.
 
+![image](https://github.com/user-attachments/assets/1f10f09e-34fa-4bd3-8fc5-670aaca7e612)
+
 4. Ahora los story points se han ajustado para reflejar el esfuerzo que se hizo en este sprint. Mueve esta historia a la columna **Done**.
 
+![image](https://github.com/user-attachments/assets/b50a1d64-5e47-485d-bfed-8169e46af83a)
+
 5. Presenta tu Kanban board avanzado.
+
+![image](https://github.com/user-attachments/assets/fb64d773-399e-4679-81ca-9cee95e6949f)
 
 6. Queremos crear una nueva historia para documentar el trabajo restante. Regresa a tu repositorio de GitHub de la actividad. Navega a la pestaña **Issues** y haz clic en el botón ****New Issue****.  
    **Nota**: Elige la **User Story Template** y haz clic en el botón ****Get Started****.
 
+![image](https://github.com/user-attachments/assets/3af7e4bf-7040-46bc-b0ed-8bbe11fb5acc)
+
 7. Completa el nuevo issue llenando el título y la descripción para completar la historia. Asigna la etiqueta **technical debt**, similar a la historia original. Elige el proyecto como **Devops-agile**. Una vez terminado, haz clic en el botón ****Submit new issue****.
+
+![image](https://github.com/user-attachments/assets/3cb074b9-44b6-4999-b0eb-b5690b2ab256)
 
 8. Dado que este nuevo issue se agregará a la columna Product Backlog, abre la lista desplegable junto a la opción **Status** y elige ****Product Backlog****. Establece el **Estimate** en **3**, representando los story points restantes de la historia no terminada.
 
+![image](https://github.com/user-attachments/assets/d1949ac4-9773-4e71-b5a3-13ce6fa0e080)
+
+![image](https://github.com/user-attachments/assets/c2c131eb-3333-4a2a-9c3d-2d5034888127)
+
 9. Asegúrate de que la historia esté en la parte superior de la columna Product Backlog para ser seleccionada en el próximo sprint.
+
+![image](https://github.com/user-attachments/assets/2b98f314-d245-4b97-b212-4cb91f3b5bb3)
