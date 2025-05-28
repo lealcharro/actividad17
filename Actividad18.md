@@ -1,4 +1,6 @@
-![image](https://github.com/user-attachments/assets/20cef7ed-7964-49c7-ae3c-b7f033aeebc2)### **Actividad**: Gestión ágil de sprints con GitHub, planificación, ejecución y cierre de Sprints
+![image](https://github.com/user-attachments/assets/20cef7ed-7964-49c7-ae3c-b7f033aeebc2)
+
+### **Actividad**: Gestión ágil de sprints con GitHub, planificación, ejecución y cierre de Sprints
 
 ##### Objetivos:
 
@@ -156,39 +158,67 @@ Después de completar esta actividad de planificación del sprint, presenta tu K
 - Deploy service to the cloud  
 
 
+
 #### 1: Flujo de trabajo diario
 
 En este ejercicio, simularás el flujo de trabajo diario de un desarrollador en un equipo Agile. Comenzarás moviendo una historia desde la parte superior del Sprint Backlog a la columna In Progress y la asignarás a ti mismo. Luego, simularás completar la historia, solicitar una revisión y finalmente moverla a Done.
 
 1. Ve a GitHub, inicia sesión con tu cuenta de GitHub y abre tu Kanban board.
 
+![image](https://github.com/user-attachments/assets/9f761286-42db-4187-b24b-2f0e19b8515f)
+
 2. El sprint ha comenzado y estás listo para trabajar en tu primera historia. Selecciona la historia en la parte superior del Sprint Backlog para abrirla y leerla.
+
+![image](https://github.com/user-attachments/assets/fe7c180b-55c9-42c4-b042-3f660e0a29c7)
+
 
 3. Después de leerla, decides que esta es una tarea para la que tienes las habilidades necesarias, así que te la asignas haciendo clic en la opción **Assign yourself**.
 
+En este caso me asigno la tarea a mi mismo.(Diego Delgado - Ox-Chema-xO)
+
+![image](https://github.com/user-attachments/assets/4019f778-9150-4bbe-b959-2f48754d5f99)
+
 4. Una vez asignada, haz clic en el botón **X** para cerrar la ventana.
+
 
 5. De vuelta en el Kanban board, mueve la historia que acabas de asignarte del Sprint Backlog arrastrándola a la columna **In Progress**.
 
 6. Ahora, todos saben que estás trabajando en esta historia. Normalmente, crearías una rama en GitHub para comenzar a trabajar en tu código. Para esta actividad, solo asegúrate de que tu Kanban board se vea como el siguiente.
 
+![image](https://github.com/user-attachments/assets/fa325915-36aa-4058-9827-ca0928d3bff7)
+
 7. Una vez que termines de trabajar en la historia, es momento de solicitar una revisión. Siempre es buena idea que al menos otra persona revise todos los productos de trabajo. Si registraste código en GitHub, este es el paso donde harías un pull request para fusionar tu código en la rama main. Mueve tu historia de In Progress a **Review/QA**.
 
+![image](https://github.com/user-attachments/assets/6bbcba37-3c17-4e0e-898d-b3dcdfd71794)
+
 8. Mientras esperas una revisión, decides comenzar a trabajar en otra historia. Toma la siguiente historia de la parte superior del Sprint Backlog, léela para asegurarte de que tienes las habilidades para implementarla (Pista: Las tienes), asígnatela y muévela a In Progress.
+
+![image](https://github.com/user-attachments/assets/d45754f0-2f28-41d0-ba95-bcec2747d615)
+
+![image](https://github.com/user-attachments/assets/9936b182-2849-4777-9b1a-2c169f838220)
 
 9. Tu pull request para la historia inicial ha sido aprobado, y el proceso de revisión se ha completado. Por favor, mueve la historia **Need a service that has a counter** de la columna Review/QA a la columna **Done**.  
    **Nota**: Cuando los issues se mueven a la columna Done, se marcarán automáticamente como cerrados, gracias a la funcionalidad incorporada de GitHub.
 
+![image](https://github.com/user-attachments/assets/4576f304-310d-4eb1-81c4-9317db84d69b)
+
 10. Has completado el trabajo en tu segunda historia y has hecho otro pull request. Mueve la historia **Must persist counter across restarts** de la columna In Progress a la columna **Review/QA** para solicitar una revisión.
+
+![image](https://github.com/user-attachments/assets/b013281b-4fc2-4c79-add1-4e968ce96e5e)
 
 11. Toma la última historia, **Deploy service to the cloud**, de la parte superior del Sprint Backlog, asígnatela y muévela a In Progress.
 
+![image](https://github.com/user-attachments/assets/bb113565-80cf-4ec3-a484-9afb12be7438)
+
 12. La revisión de tu segunda historia se ha completado. Mueve la historia **Must persist counter across restarts** de Review/QA a **Done**.
+
+![image](https://github.com/user-attachments/assets/4c2cc506-c9a5-485e-abb3-8d584156ada4)
 
 13. El sprint ha terminado y no hemos tenido tiempo para completar nuestra última historia, **Deploy service to the cloud**, que aún está en progreso. Veremos cómo lidiar con esto. Déjala donde está por ahora.
 
 14. Presenta tu Kanban board terminado.
 
+![image](https://github.com/user-attachments/assets/73fd0b8d-52a1-4a8e-991f-1ddf19751183)
 
 ####  Parte 3
 
